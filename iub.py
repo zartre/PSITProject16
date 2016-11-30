@@ -9,3 +9,6 @@ Thanpisit Wattanasomvong
 
 For help, please refer to the documentation or type help.
 """
+import numpy as num
+import pandas as pd
+import matplotlib as mp
