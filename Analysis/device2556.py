@@ -1,3 +1,7 @@
+"""
+    This Program is used to make bar graph from file CSV.
+    This graph is All internet usage device in 2556
+"""
 import csv
 import pygal
 import cairo
