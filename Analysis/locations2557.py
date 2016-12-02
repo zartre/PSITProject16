@@ -1,6 +1,6 @@
 """
     This Program is used to make bar graph from file CSV.
-    This graph is All internet usage type in 2556
+    This graph is All internet usage location in 2557
 """
 import csv
 import pygal
