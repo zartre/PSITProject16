@@ -16,7 +16,7 @@ with open('2557_locations.csv', newline='') as csvfile:
         list_female.append(female)
     line_chart = pygal.Bar()
     line_chart.title = 'All internet usage locations 2557 (in %)'
-    line_chart.x_labels = lst[1:]
-    line_chart.add('Male', [float(i) for i in lst2[1:]])
-    line_chart.add('Female',  [float(i)  for i in lst3[1:]])
+    line_chart.x_labels = list_local[1:]
+    line_chart.add('Male', [float(i) for i in list_male[1:]])
+    line_chart.add('Female',  [float(i)  for i in list_female[1:]])
     line_chart.render_to_file('line_chart2.svg')                          # Save the svg to a file
