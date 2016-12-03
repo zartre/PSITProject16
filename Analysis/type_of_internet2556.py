@@ -4,14 +4,14 @@
 """
 import csv
 import pygal
-import cairo
+#import cairo
 with open('2556_usage_all.csv', newline='') as csvfile:
     a = csv.reader(csvfile)
-    list_type = []
+    list_types = []
     list_male = []
     list_female = []
-    for type, male, female in a:
-        list_type.append(type)
+    for types, male, female in a:
+        list_type.append(types)
         list_male.append(male)
         list_female.append(female)
     line_chart = pygal.Bar()
@@ -19,4 +19,4 @@ with open('2556_usage_all.csv', newline='') as csvfile:
     line_chart.x_labels = lst[1:]
     line_chart.add('Male', [float(i) for i in lst2[1:]])
     line_chart.add('Female',  [float(i)  for i in lst3[1:]])
-    line_chart.render_to_file('line_chart2.svg')                          # Save the svg to a file
+    line_chart.render_to_file('line_chart2.svg') # Save the svg to a file
