@@ -11,7 +11,7 @@ with open('2558_locations.csv', newline='') as csvfile:
     list_male = []
     list_female = []
     for locations, male, female in a:
-        list_locations.append(type)
+        list_locations.append(types)
         list_male.append(male)
         list_female.append(female)
     line_chart = pygal.Bar()

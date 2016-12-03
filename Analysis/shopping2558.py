@@ -7,11 +7,11 @@ import pygal
 import cairo
 with open('2557_shopping.csv', newline='') as csvfile:
     a = csv.reader(csvfile)
-    list_shoppingtype = []
+    list_shoppingtypes = []
     list_male = []
     list_female = []
-    for types, male, female in a:
-        list_shoppingtype.append(type)
+    for typess, male, female in a:
+        list_shoppingtypes.append(types)
         list_male.append(male)
         list_female.append(female)
     line_chart = pygal.Bar()
