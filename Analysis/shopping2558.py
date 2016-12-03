@@ -10,7 +10,7 @@ with open('2557_shopping.csv', newline='') as csvfile:
     list_shoppingtypes = []
     list_male = []
     list_female = []
-    for typess, male, female in a:
+    for types, male, female in a:
         list_shoppingtypes.append(types)
         list_male.append(male)
         list_female.append(female)

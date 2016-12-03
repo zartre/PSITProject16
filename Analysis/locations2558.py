@@ -4,14 +4,13 @@
 """
 import csv
 import pygal
-import cairo
 with open('2558_locations.csv', newline='') as csvfile:
     a = csv.reader(csvfile)
     list_locations = []
     list_male = []
     list_female = []
     for locations, male, female in a:
-        list_locations.append(types)
+        list_locations.append(locations)
         list_male.append(male)
         list_female.append(female)
     line_chart = pygal.Bar()
