@@ -164,7 +164,7 @@ def view_2558_shopping():
         list_types = []
         list_male = []
         list_female = []
-        for typess, male, female in a:
+        for types, male, female in a:
             list_types.append(types)
             list_male.append(male)
             list_female.append(female)
@@ -201,6 +201,6 @@ view_2557_locations()
 view_2558_locations()
 view_2557_usage_mobile()
 view_2558_usage_mobile()
-#view_2558_shopping()
+view_2558_shopping()
 view_2556_purposes()
 print("Charts created successfully!")
