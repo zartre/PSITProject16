@@ -25,7 +25,7 @@ def view_2557_usage_desktop():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage desktop 2557 (in %)'
+        line_chart.title = 'Types of Internet Usage on Desktops in 2014 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -33,7 +33,7 @@ def view_2557_usage_desktop():
 
 # desktop2558
 def view_2558_usage_desktop():
-    with open('data/2558_usage_mobile.csv', newline='') as csvfile:
+    with open('data/2558_usage_desktop.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
         list_male = []
@@ -43,7 +43,7 @@ def view_2558_usage_desktop():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage mobile 2558 (in %)'
+        line_chart.title = 'Types of Internet Usage on Desktops in 2015 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -61,7 +61,7 @@ def view_2557_devices():
             lst2.append(male)
             lst3.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage device 2556 (in %)'
+        line_chart.title = 'Internet Access Devices in 2013 (percentage)'
         line_chart.x_labels = lst[1:]
         line_chart.add('Male', [float(i) for i in lst2[1:]])
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
@@ -79,7 +79,7 @@ def view_2558_devices():
             lst2.append(male)
             lst3.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage device 2558 (in %)'
+        line_chart.title = 'Internet Access Devices in 2015 (percentage)'
         line_chart.x_labels = lst[1:]
         line_chart.add('Male', [float(i) for i in lst2[1:]])
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
@@ -97,7 +97,7 @@ def view_2557_locations():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage locations 2557 (in %)'
+        line_chart.title = 'Internet Usage Locations in 2014 (percentage)'
         line_chart.x_labels = list_local[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -115,7 +115,7 @@ def view_2558_locations():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage location in 2558 (in %)'
+        line_chart.title = 'Internet Usage Locations in 2015 (percentage)'
         line_chart.x_labels = list_locations[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -133,7 +133,7 @@ def view_2557_usage_mobile():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage mobile 2557 (in %)'
+        line_chart.title = 'Types of Internet Usage on Mobiles in 2014 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -151,7 +151,7 @@ def view_2558_usage_mobile():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage mobile 2558 (in %)'
+        line_chart.title = 'Types of Internet Usage on Mobiles in 2015 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -169,7 +169,7 @@ def view_2558_shopping():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage shopping 2558 (in %)'
+        line_chart.title = 'Online Shopping Genres in 2015 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
@@ -187,7 +187,7 @@ def view_2556_purposes():
             list_male.append(male)
             list_female.append(female)
         line_chart = pygal.Bar()
-        line_chart.title = 'All internet usage type 2556 (in %)'
+        line_chart.title = 'Internet Usage Types in 2013 (percentage)'
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
