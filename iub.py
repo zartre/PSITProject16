@@ -12,13 +12,17 @@ For help, please refer to the documentation or type help.
 
 import csv
 import pygal
+from time import sleep
 
-print("Internet Usage Behaviours of Thai Netizens \n\n A Project by:\n Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus, \n \
-Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n For help, please refer to the documentation or type help.\n\n")
-print("Please wait while we creating charts....")
-# desktop2557
+print("Internet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
+Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus,\n \
+Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n\
+For help, please refer to the documentation or type help.\n\n")
+sleep(2)
+print("Please wait while we are creating charts....")
+
 def view_2557_usage_desktop():
-    """ Analytic graph for type of usage via desktops platform in 2557 """
+    """ Analytic graph for types of usage via desktops in 2557 """
     with open('data/2557_usage_desktop.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -35,9 +39,8 @@ def view_2557_usage_desktop():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_desktop_usage_2557.svg')
 
-# desktop2558
 def view_2558_usage_desktop():
-    """ Analytic graph for type of usage via desktops platform in 2558 """
+    """ Analytic graph for types of usage via desktops in 2558 """
     with open('data/2558_usage_desktop.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -54,9 +57,8 @@ def view_2558_usage_desktop():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_desktop_usage_2558.svg')
 
-# device2556
 def view_2556_devices():
-    """ Analytic graph for type of device for internet usage in 2556 """
+    """ Analytic graph for types of Internet access devices in 2556 """
     with open('data/2556_devices.csv',newline='') as csvfile:
         a = csv.reader(csvfile)
         lst = []
@@ -73,9 +75,8 @@ def view_2556_devices():
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
         line_chart.render_to_file('chart_devices_2556.svg')
 
-# device2558
 def view_2558_devices():
-    """ Analytic graph for type of device for internet usage in 2558 """
+    """ Analytic graph for types of Internet access devices in 2558 """
     with open('data/2558_devices.csv',newline='') as csvfile:
         a = csv.reader(csvfile)
         lst = []
@@ -92,9 +93,8 @@ def view_2558_devices():
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
         line_chart.render_to_file('chart_devices_2558.svg')
 
-# locations2557
 def view_2557_locations():
-    """ Analytic graph for location internet usage being use in 2557 """
+    """ Analytic graph for Internet usage locations in 2557 """
     with open('data/2557_locations.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_local = []
@@ -111,9 +111,8 @@ def view_2557_locations():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_locations_2557.svg')
 
-# locations2558
 def view_2558_locations():
-    """ Analytic graph for location internet usage being use in 2558 """
+    """ Analytic graph for Internet usage locations in 2558 """
     with open('data/2558_locations.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_locations = []
@@ -130,9 +129,8 @@ def view_2558_locations():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_locations_2558.svg')
 
-# mobile2557
 def view_2557_usage_mobile():
-    """ Analytic graph for type of usage via mobiles platform in 2557 """
+    """ Analytic graph for types of usage via mobile devies in 2557 """
     with open('data/2557_usage_mobile.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -149,9 +147,8 @@ def view_2557_usage_mobile():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_mobile_usage_2557.svg')
 
-# mobile2558
 def view_2558_usage_mobile():
-    """ Analytic graph for type of usage via mobiles platform in 2558 """
+    """ Analytic graph for types of usage via mobile devies in 2558 """
     with open('data/2558_usage_mobile.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -168,9 +165,8 @@ def view_2558_usage_mobile():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_mobile_usage_2558.svg')
 
-# shopping2558
 def view_2558_shopping():
-    """ Analytic graph for genre of online shopping in 2558 """
+    """ Analytic graph for genres of online shopping in 2558 """
     with open('data/2558_shopping.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -187,9 +183,8 @@ def view_2558_shopping():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_shopping_2558.svg')
 
-# usagetypes2556
 def view_2556_purposes():
-    """ Analytic graph for type of internet usage in 2556 """
+    """ Analytic graph for types of Internet usage in 2556 """
     with open('data/2556_usage_all.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
