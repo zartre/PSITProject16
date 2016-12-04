@@ -1,3 +1,0 @@
-* Handle the following properly:
-  csv.parser().parse('"fielda",     "fieldb"')
- 
