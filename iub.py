@@ -17,7 +17,7 @@ from time import sleep
 print("\nInternet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
 Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus,\n \
 Thanathep Thaithae and\n Thanpisit Wattanasomvong\n\n\
-Charts are created in the project's root.")
+Charts are created in the 'charts' folder.")
 
 def view_2557_usage_desktop():
     """ Analytic graph for types of usage via desktops in 2557 """
@@ -35,7 +35,7 @@ def view_2557_usage_desktop():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_desktop_usage_2557.svg')
+        line_chart.render_to_file('charts/chart_desktop_usage_2557.svg')
 
 def view_2558_usage_desktop():
     """ Analytic graph for types of usage via desktops in 2558 """
@@ -53,7 +53,7 @@ def view_2558_usage_desktop():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_desktop_usage_2558.svg')
+        line_chart.render_to_file('charts/chart_desktop_usage_2558.svg')
 
 def view_2556_devices():
     """ Analytic graph for types of Internet access devices in 2556 """
@@ -71,7 +71,7 @@ def view_2556_devices():
         line_chart.x_labels = lst[1:]
         line_chart.add('Male', [float(i) for i in lst2[1:]])
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
-        line_chart.render_to_file('chart_devices_2556.svg')
+        line_chart.render_to_file('charts/chart_devices_2556.svg')
 
 def view_2558_devices():
     """ Analytic graph for types of Internet access devices in 2558 """
@@ -89,7 +89,7 @@ def view_2558_devices():
         line_chart.x_labels = lst[1:]
         line_chart.add('Male', [float(i) for i in lst2[1:]])
         line_chart.add('Female',  [float(i)  for i in lst3[1:]])
-        line_chart.render_to_file('chart_devices_2558.svg')
+        line_chart.render_to_file('charts/chart_devices_2558.svg')
 
 def view_2557_locations():
     """ Analytic graph for Internet usage locations in 2557 """
@@ -107,7 +107,7 @@ def view_2557_locations():
         line_chart.x_labels = list_local[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_locations_2557.svg')
+        line_chart.render_to_file('charts/chart_locations_2557.svg')
 
 def view_2558_locations():
     """ Analytic graph for Internet usage locations in 2558 """
@@ -125,7 +125,7 @@ def view_2558_locations():
         line_chart.x_labels = list_locations[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_locations_2558.svg')
+        line_chart.render_to_file('charts/chart_locations_2558.svg')
 
 def view_2557_usage_mobile():
     """ Analytic graph for types of usage via mobile devies in 2557 """
@@ -143,7 +143,7 @@ def view_2557_usage_mobile():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_mobile_usage_2557.svg')
+        line_chart.render_to_file('charts/chart_mobile_usage_2557.svg')
 
 def view_2558_usage_mobile():
     """ Analytic graph for types of usage via mobile devies in 2558 """
@@ -161,7 +161,7 @@ def view_2558_usage_mobile():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_mobile_usage_2558.svg')
+        line_chart.render_to_file('charts/chart_mobile_usage_2558.svg')
 
 def view_2558_shopping():
     """ Analytic graph for genres of online shopping in 2558 """
@@ -179,7 +179,7 @@ def view_2558_shopping():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_shopping_2558.svg')
+        line_chart.render_to_file('charts/chart_shopping_2558.svg')
 
 def view_2556_purposes():
     """ Analytic graph for types of Internet usage in 2556 """
@@ -197,7 +197,7 @@ def view_2556_purposes():
         line_chart.x_labels = list_types[1:]
         line_chart.add('Male', [float(i) for i in list_male[1:]])
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
-        line_chart.render_to_file('chart_internet.svg')
+        line_chart.render_to_file('charts/chart_internet.svg')
 
 def create_chart():
     """ Asks the user for inputs """
