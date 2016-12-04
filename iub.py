@@ -200,7 +200,7 @@ def view_2556_usage():
         line_chart.render_to_file('charts/chart_internet.svg')
 
 def view_3_year_usage():
-    """ Ana """
+    """ Analytic graph for types of Internet usage from 2013 to 2015 """
     with open('data/3_year_usage.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
