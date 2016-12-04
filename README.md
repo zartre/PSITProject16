@@ -6,3 +6,6 @@ Analysing Internet Usage Behaviours of Thai Netizens with Python
 * 59070079 - Thanpisit Wattanasomvong
 * 59070087 - Nathan Yiangsupapaanontr
 * 59070147 - Rattanachat Sooksumpus
+
+## Screenshot
+![The program running in Terminal](http://i.imgur.com/sK3wZK7.png "The program running in Terminal")
