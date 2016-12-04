@@ -16,8 +16,8 @@ from time import sleep
 
 print("\nInternet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
 Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus,\n \
-Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n\
-For help, please refer to the documentation or type help.")
+Thanathep Thaithae and\n Thanpisit Wattanasomvong\n\n\
+Charts are created in the project's root.")
 
 def view_2557_usage_desktop():
     """ Analytic graph for types of usage via desktops in 2557 """
