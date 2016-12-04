@@ -14,12 +14,10 @@ import csv
 import pygal
 from time import sleep
 
-print("Internet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
+print("\nInternet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
 Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus,\n \
 Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n\
-For help, please refer to the documentation or type help.\n")
-sleep(2)
-print("Please wait while we are creating charts....")
+For help, please refer to the documentation or type help.")
 
 def view_2557_usage_desktop():
     """ Analytic graph for types of usage via desktops in 2557 """
@@ -201,15 +199,92 @@ def view_2556_purposes():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('chart_internet.svg')
 
-view_2557_usage_desktop()
-view_2558_usage_desktop()
-view_2556_devices()
-view_2558_devices()
-view_2557_locations()
-view_2558_locations()
-view_2557_usage_mobile()
-view_2558_usage_mobile()
-view_2558_shopping()
-view_2556_purposes()
+def create_chart():
+    """ Asks the user for inputs """
+    available = ["Usages on desktops", "Usages on mobiles", "Device types",\
+    "Usage locations", "Shopping genres", "Usage types", "All"]
+    item = 1
+    print("\nWhich chart do you want to generate?")
+    for i in available:
+        print("[%d] %s" %(item, i))
+        item += 1
+    user_wants = input("\nType a number or type STOP to terminate: ")
+    if user_wants == '5':
+        view_2558_shopping()
+        print("\nChart created successfully!")
+    elif user_wants == '6':
+        view_2556_purposes()
+        print("\nChart created successfully!")
+    elif user_wants == '1':
+        year = input("2014 or 2015: ")
+        if year == "2014":
+            view_2557_usage_desktop()
+            print("\nChart created successfully!")
+        elif year == "2015":
+            view_2558_usage_desktop()
+            print("\nChart created successfully!")
+        else:
+            print("Invalid command.")
+    elif user_wants == '2':
+        year = input("2014 or 2015: ")
+        if year == "2014":
+            view_2557_usage_mobile()
+            print("\nChart created successfully!")
+        elif year == "2015":
+            view_2558_usage_mobile()
+            print("\nChart created successfully!")
+        else:
+            print("Invalid command.")
+    elif user_wants == '3':
+        year = input("2014 or 2015: ")
+        if year == "2014":
+            view_2557_devices()
+            print("\nChart created successfully!")
+        elif year == "2015":
+            view_2558_devices()
+            print("\nChart created successfully!")
+        else:
+            print("Invalid command.")
+    elif user_wants == '4':
+        year = input("2014 or 2015: ")
+        if year == "2014":
+            view_2557_locations()
+            print("\nChart created successfully!")
+        elif year == "2015":
+            view_2558_locations()
+            print("\nChart created successfully!")
+        else:
+            print("Invalid command.")
+    elif user_wants == '7':
+        view_2557_usage_desktop() # 1
+        view_2558_usage_desktop()
+        view_2556_devices() # 3
+        view_2558_devices()
+        view_2557_locations() # 4
+        view_2558_locations()
+        view_2557_usage_mobile() # 2
+        view_2558_usage_mobile()
+        view_2558_shopping() # 5
+        view_2556_purposes() # 6
+        print("\nCharts created successfully!")
+    elif user_wants.lower() == "stop":
+        return "stop"
+    else:
+        print("Invalid command.")
+    sleep(1)
 
-print("\nCharts created successfully!")
+while 1:
+    if create_chart() == "stop":
+        print("\nBye!\n")
+        break
+
+# view_2557_usage_desktop() 1
+# view_2558_usage_desktop() 1
+# view_2556_devices() 3
+# view_2558_devices() 3
+# view_2557_locations() 4
+# view_2558_locations() 4
+# view_2557_usage_mobile() 2
+# view_2558_usage_mobile() 2
+# view_2558_shopping() 5
+# view_2556_purposes() 6
