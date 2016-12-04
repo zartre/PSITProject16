@@ -94,6 +94,7 @@ def view_2558_devices():
 
 # locations2557
 def view_2557_locations():
+    """ Analytic graph for location internet usage being use in 2557 """
     with open('data/2557_locations.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_local = []
@@ -112,6 +113,7 @@ def view_2557_locations():
 
 # locations2558
 def view_2558_locations():
+    """ Analytic graph for location internet usage being use in 2558 """
     with open('data/2558_locations.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_locations = []
@@ -130,6 +132,7 @@ def view_2558_locations():
 
 # mobile2557
 def view_2557_usage_mobile():
+    """ Analytic graph for type of usage via mobiles platform in 2557 """
     with open('data/2557_usage_mobile.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -148,6 +151,7 @@ def view_2557_usage_mobile():
 
 # mobile2558
 def view_2558_usage_mobile():
+    """ Analytic graph for type of usage via mobiles platform in 2558 """
     with open('data/2558_usage_mobile.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -166,6 +170,7 @@ def view_2558_usage_mobile():
 
 # shopping2558
 def view_2558_shopping():
+    """ Analytic graph for genre of online shopping in 2558 """
     with open('data/2558_shopping.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -184,6 +189,7 @@ def view_2558_shopping():
 
 # usagetypes2556
 def view_2556_purposes():
+    """ Analytic graph for type of internet usage in 2556 """
     with open('data/2556_usage_all.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
