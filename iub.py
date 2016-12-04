@@ -13,8 +13,12 @@ For help, please refer to the documentation or type help.
 import csv
 import pygal
 
+print("Internet Usage Behaviours of Thai Netizens \n\n A Project by:\n Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus, \n \
+Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n For help, please refer to the documentation or type help.\n\n")
+print("Please wait while we creating charts....")
 # desktop2557
 def view_2557_usage_desktop():
+    """ Analytic graph for type of usage via desktops platform in 2557 """
     with open('data/2557_usage_desktop.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -33,6 +37,7 @@ def view_2557_usage_desktop():
 
 # desktop2558
 def view_2558_usage_desktop():
+    """ Analytic graph for type of usage via desktops platform in 2558 """
     with open('data/2558_usage_desktop.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
         list_types = []
@@ -50,7 +55,8 @@ def view_2558_usage_desktop():
         line_chart.render_to_file('chart_desktop_usage_2558.svg')
 
 # device2556
-def view_2557_devices():
+def view_2556_devices():
+    """ Analytic graph for type of device for internet usage in 2556 """
     with open('data/2556_devices.csv',newline='') as csvfile:
         a = csv.reader(csvfile)
         lst = []
@@ -69,6 +75,7 @@ def view_2557_devices():
 
 # device2558
 def view_2558_devices():
+    """ Analytic graph for type of device for internet usage in 2558 """
     with open('data/2558_devices.csv',newline='') as csvfile:
         a = csv.reader(csvfile)
         lst = []
@@ -195,7 +202,7 @@ def view_2556_purposes():
 
 view_2557_usage_desktop()
 view_2558_usage_desktop()
-view_2557_devices()
+view_2556_devices()
 view_2558_devices()
 view_2557_locations()
 view_2558_locations()
@@ -203,4 +210,5 @@ view_2557_usage_mobile()
 view_2558_usage_mobile()
 view_2558_shopping()
 view_2556_purposes()
-print("Charts created successfully!")
+
+print("\n\nCharts created successfully!")
