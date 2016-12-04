@@ -17,7 +17,7 @@ from time import sleep
 print("Internet Usage Behaviours of Thai Netizens\n\n A Project by:\n \
 Nathan Yiangsupapaanontr,\n Rattanachat Sooksumpus,\n \
 Thanathep Thaithae and\n Thanpisit Wattanasomvong \n\n\
-For help, please refer to the documentation or type help.\n\n")
+For help, please refer to the documentation or type help.\n")
 sleep(2)
 print("Please wait while we are creating charts....")
 
@@ -212,4 +212,4 @@ view_2558_usage_mobile()
 view_2558_shopping()
 view_2556_purposes()
 
-print("\n\nCharts created successfully!")
+print("\nCharts created successfully!")
