@@ -181,7 +181,7 @@ def view_2558_shopping():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('charts/chart_shopping_2558.svg')
 
-def view_2556_purposes():
+def view_2556_usage():
     """ Analytic graph for types of Internet usage in 2556 """
     with open('data/2556_usage_all.csv', newline='') as csvfile:
         a = csv.reader(csvfile)
@@ -199,6 +199,27 @@ def view_2556_purposes():
         line_chart.add('Female',  [float(i)  for i in list_female[1:]])
         line_chart.render_to_file('charts/chart_internet.svg')
 
+def view_3_year_usage():
+    """ Ana """
+    with open('data/3_year_usage.csv', newline='') as csvfile:
+        a = csv.reader(csvfile)
+        list_types = []
+        list_2013 = []
+        list_2014 = []
+        list_2015 = []
+        for types, first, seccond, third in a:
+            list_types.append(types)
+            list_2013.append(first)
+            list_2014.append(seccond)
+            list_2015.append(third)
+        line_chart = pygal.Bar()
+        line_chart.title = 'Internet Usage Types from 2013 to 2015 (percentage)'
+        line_chart.x_labels = list_types[1:]
+        line_chart.add('2013', [float(i) for i in list_2013[1:]])
+        line_chart.add('2014',  [float(i)  for i in list_2014[1:]])
+        line_chart.add('2015',  [float(i)  for i in list_2015[1:]])
+        line_chart.render_to_file('charts/chart_3_year_usage.svg')
+
 def create_chart():
     """ Asks the user for inputs """
     available = ["Usages on desktops", "Usages on mobiles", "Device types",\
@@ -211,9 +232,6 @@ def create_chart():
     user_wants = input("\nType a number or type STOP to terminate: ")
     if user_wants == '5':
         view_2558_shopping()
-        print("\nChart created successfully!")
-    elif user_wants == '6':
-        view_2556_purposes()
         print("\nChart created successfully!")
     elif user_wants == '1':
         year = input("2014 or 2015: ")
@@ -255,6 +273,16 @@ def create_chart():
             print("\nChart created successfully!")
         else:
             print("Invalid command.")
+    elif user_wants == '6':
+        year = input("[2013] or 2013 to 2015 [all]: ")
+        if year == "2013":
+            view_2556_usage()
+            print("\nChart created successfully!")
+        elif year.lower() == "all":
+            view_3_year_usage()
+            print("\nChart created successfully!")
+        else:
+            print("Invalid command.")
     elif user_wants == '7':
         view_2557_usage_desktop() # 1
         view_2558_usage_desktop()
@@ -265,7 +293,7 @@ def create_chart():
         view_2557_usage_mobile() # 2
         view_2558_usage_mobile()
         view_2558_shopping() # 5
-        view_2556_purposes() # 6
+        view_2556_usage() # 6
         print("\nCharts created successfully!")
     elif user_wants.lower() == "stop":
         return "stop"
@@ -287,4 +315,4 @@ while 1:
 # view_2557_usage_mobile() 2
 # view_2558_usage_mobile() 2
 # view_2558_shopping() 5
-# view_2556_purposes() 6
+# view_2556_usage() 6
