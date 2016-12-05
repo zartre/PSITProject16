@@ -254,9 +254,9 @@ def create_chart():
         else:
             print("Invalid command.")
     elif user_wants == '3':
-        year = input("2014 or 2015: ")
-        if year == "2014":
-            view_2557_devices()
+        year = input("2013 or 2015: ")
+        if year == "2013":
+            view_2556_devices()
             print("\nChart created successfully!")
         elif year == "2015":
             view_2558_devices()
