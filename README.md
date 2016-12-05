@@ -8,4 +8,4 @@ Analysing Internet Usage Behaviours of Thai Netizens with Python
 * 59070147 - Rattanachat Sooksumpus
 
 ## Screenshot
-![The program running in Terminal](http://i.imgur.com/OE8mtAs.gif "The program running in Terminal")
+![The program running in Terminal](http://i.imgur.com/4FzDhet.gif "The program running in Terminal")
