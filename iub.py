@@ -220,10 +220,19 @@ def view_3_year_usage():
         line_chart.add('2015',  [float(i)  for i in list_2015[1:]])
         line_chart.render_to_file('charts/chart_3_year_usage.svg')
 
+def view_men_vs_women():
+    """ Analytic graph for Internet usage between men and women """
+    line_chart = pygal.Pie(print_values=True)
+    line_chart.title = 'Internet Usage: Men vs Women (percentage)'
+    line_chart.add('Men', 43)
+    line_chart.add('Women', 57)
+    line_chart.render_to_file('charts/chart_men_vs_women.svg')
+
 def create_chart():
     """ Asks the user for inputs """
     available = ["Usages on desktops", "Usages on mobiles", "Device types",\
-    "Usage locations", "Shopping genres", "Usage types", "All"]
+    "Usage locations", "Shopping genres", "Usage types",\
+    "Usage of men vs women", "All"]
     item = 1
     print("\nWhich chart do you want to generate?")
     for i in available:
@@ -232,6 +241,9 @@ def create_chart():
     user_wants = input("\nType a number or type STOP to terminate: ")
     if user_wants == '5':
         view_2558_shopping()
+        print("\nChart created successfully!")
+    elif user_wants == '7':
+        view_men_vs_women()
         print("\nChart created successfully!")
     elif user_wants == '1':
         year = input("2014 or 2015: ")
@@ -283,7 +295,7 @@ def create_chart():
             print("\nChart created successfully!")
         else:
             print("Invalid command.")
-    elif user_wants == '7':
+    elif user_wants == '8':
         view_2557_usage_desktop() # 1
         view_2558_usage_desktop()
         view_2556_devices() # 3
